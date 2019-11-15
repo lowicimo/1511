@@ -81,4 +81,111 @@ void comparision(double& a, double& b, double& c, double& xr, double& yr, double
 				zr = deg_z(a, b, c, xr, yr, zr);
 			}
 			else
-				//ороро
+				if ((a != 0) && (xr != 0) && (yr != 0))
+				{
+					zr = deg_z(a, b, c, xr, yr, zr);
+					b = side_b(a, b, c, xr, yr, zr);
+					c = side_c(a, b, c, xr, yr, zr);
+				}
+				else
+					if ((b != 0) && (yr != 0) && (zr != 0))
+					{
+						xr = deg_x(a, b, c, xr, yr, zr);
+						a = side_a(a, b, c, xr, yr, zr);
+						c = side_c(a, b, c, xr, yr, zr);
+					}
+					else
+						if ((c != 0) && (xr != 0) && (zr != 0))
+						{
+							yr = deg_y(a, b, c, xr, yr, zr);
+							a = side_a(a, b, c, xr, yr, zr);
+							b = side_b(a, b, c, xr, yr, zr);
+						}
+						else
+							if ((a != 0) && (yr != 0) && (zr != 0))
+							{
+								xr = deg_x(a, b, c, xr, yr, zr);
+								b = side_b(a, b, c, xr, yr, zr);
+								c = side_c(a, b, c, xr, yr, zr);
+							}
+							else
+								if ((a != 0) && (xr != 0) && (zr != 0))
+								{
+									yr = deg_y(a, b, c, xr, yr, zr);
+									b = side_b(a, b, c, xr, yr, zr);
+									c = side_c(a, b, c, xr, yr, zr);
+								}
+								else
+									if ((b != 0) && (yr != 0) && (xr != 0))
+									{
+										zr = deg_z(a, b, c, xr, yr, zr);
+										a = side_a(a, b, c, xr, yr, zr);
+										c = side_c(a, b, c, xr, yr, zr);
+									}
+									else
+										if ((b != 0) && (zr != 0) && (xr != 0))
+										{
+											yr = deg_y(a, b, c, xr, yr, zr);
+											a = side_a(a, b, c, xr, yr, zr);
+											c = side_c(a, b, c, xr, yr, zr);
+										}
+										else
+											if ((c != 0) && (xr != 0) && (yr != 0))
+											{
+												zr = deg_z(a, b, c, xr, yr, zr);
+												a = side_a(a, b, c, xr, yr, zr);
+												b = side_b(a, b, c, xr, yr, zr);
+											}
+											else
+												if ((c != 0) && (zr != 0) && (yr != 0))
+												{
+													xr = deg_x(a, b, c, xr, yr, zr);
+													a = side_a(a, b, c, xr, yr, zr);
+													b = side_b(a, b, c, xr, yr, zr);
+												}
+												else
+													if ((a != 0) && (b != 0) && (xr != 0))
+													{
+														zr = deg_z(a, b, c, xr, yr, zr);
+														yr = deg_y(a, b, c, xr, yr, zr);
+														c = side_c(a, b, c, xr, yr, zr);
+													}
+													else
+														if ((a != 0) && (b != 0) && (zr != 0))
+														{
+															xr = deg_x(a, b, c, xr, yr, zr);
+															yr = deg_y(a, b, c, xr, yr, zr);
+															c = side_c(a, b, c, xr, yr, zr);
+														}
+														else
+															if ((a != 0) && (c != 0) && (yr != 0))
+															{
+																zr = deg_z(a, b, c, xr, yr, zr);
+																xr = deg_x(a, b, c, xr, yr, zr);
+																b = side_b(a, b, c, xr, yr, zr);
+															}
+															else
+																if ((a != 0) && (c != 0) && (zr != 0))
+																{
+																	yr = deg_y(a, b, c, xr, yr, zr);
+																	xr = deg_x(a, b, c, xr, yr, zr);
+																	b = side_b(a, b, c, xr, yr, zr);
+																}
+																else
+																	if ((b != 0) && (c != 0) && (xr != 0))
+																	{
+																		yr = deg_y(a, b, c, xr, yr, zr);
+																		zr = deg_z(a, b, c, xr, yr, zr);
+																		a = side_a(a, b, c, xr, yr, zr);
+																	}
+																	else
+																		if ((b != 0) && (c != 0) && (yr != 0))
+																		{
+																			xr = deg_x(a, b, c, xr, yr, zr);
+																			zr = deg_z(a, b, c, xr, yr, zr);
+																			a = side_a(a, b, c, xr, yr, zr);
+																		}
+}
+
+
+
